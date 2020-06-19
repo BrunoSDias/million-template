@@ -3,8 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  clienteApi: 'http://localhost:3000',
+  acaoApi: 'https://acoes-service-prod.herokuapp.com',
+  fundoApi: 'https://service-fundoimobiliario-stat.herokuapp.com/',
+  usuarioApi: 'https://service-usuarios-stat.herokuapp.com/user',
+  tesouroApi: 'https://service-tesouromillion-stage.herokuapp.com/tesouro'
 };
+// tesouroApi: 'https://service-milliontesourodireto-s.herokuapp.com/',
 
 /*
  * For easier debugging in development mode, you can import the following file
