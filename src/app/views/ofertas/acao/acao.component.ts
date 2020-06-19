@@ -9,7 +9,6 @@ import { Acao } from '../../../models/acao'
   styleUrls: ['./acao.component.css']
 })
 export class AcaoComponent implements OnInit {
-  acoes: Acao[]
   acaoDestaque: Acao
 
   constructor(public http: HttpClient) { }
@@ -18,12 +17,10 @@ export class AcaoComponent implements OnInit {
     this.loadAcoes()
   }
 
-  loadAcoes(): void {
-    Acao.todos(this.http, (acoes)=> {
-      this.acoes = acoes
-      if (this.acoes)
-        this.acaoDestaque = this.acoes[0]
-    })
+  async loadAcoes() {
+    const acoes:Acao[] = await Acao.todos(this.http)
+    if (acoes.length > 0)
+      this.acaoDestaque = acoes[0]
   }
 
 

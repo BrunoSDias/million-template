@@ -10,11 +10,7 @@ export class Acao {
   public taxa_juros: number
   public tipo: string
 
-  static todos(http, callback) :void {
-    http.get(`${environment.acaoApi}/acoes.json`, {headers: new HttpHeaders({'token': '123456'})}).subscribe((acoes :Acao[])=>{
-      callback.call(null, acoes)
-    }, (error: HttpErrorResponse) => {
-      callback.call(null, null)
-    });
+  public static async todos(http:HttpClient) {
+   return await http.get<Acao[]>(`${environment.acaoApi}/acoes.json`, {headers: new HttpHeaders({'token': environment.token})}).toPromise()
   }
 }

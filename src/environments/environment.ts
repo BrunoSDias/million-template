@@ -8,7 +8,8 @@ export const environment = {
   acaoApi: 'https://acoes-service-prod.herokuapp.com',
   fundoApi: 'https://service-fundoimobiliario-stat.herokuapp.com/',
   usuarioApi: 'https://service-usuarios-stat.herokuapp.com/user',
-  tesouroApi: 'https://service-tesouromillion-stage.herokuapp.com/tesouro'
+  tesouroApi: 'https://service-tesouromillion-stage.herokuapp.com/',
+  token: '123456'
 };
 // tesouroApi: 'https://service-milliontesourodireto-s.herokuapp.com/',
 
